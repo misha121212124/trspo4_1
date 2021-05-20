@@ -7,7 +7,7 @@ import java.util.Scanner;
 // Для роботи з вірткальної машиную потрібно поміняти Indound rule на All traffic і поставити там своє Ip з маскою 32
 
 public class Server implements Brain {
-    static double[][] L10, L16, L17, L30, L32, L40, L42;
+    static double[][] L10, L16, L17, L30, L32, L40, L42, L12, L50;
     static boolean showIntermediateResults = false;
 
     public static void main(String[] args) {
@@ -104,6 +104,26 @@ public class Server implements Brain {
             MyJAMA.show(L42);
         }
         return L42;
+    }
+    
+    
+        public void getL12(int n,double min, double max) {
+        System.out.println("Обрахунок L12");
+        L12 = MyJAMA.create(n, min, max);
+        if(showIntermediateResults) {
+            System.out.println("Результат обрахунку:");
+            MyJAMA.show(L12);
+        }
+    }
+    
+    public double[][] getL50() {
+        System.out.println("Обрахунок L50");
+        L50 =  MyJAMA.multiplication(L30, L40);
+        if(showIntermediateResults) {
+            System.out.println("Результат обрахунку:");
+            MyJAMA.show(L50);
+        }
+        return L50;
     }
 
     public String enableShowIntermediateResultsMode() {
