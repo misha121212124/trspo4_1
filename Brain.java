@@ -9,6 +9,6 @@ public interface Brain extends Remote {
     void getL17(int n, double min, double max) throws RemoteException;
     void getL30(double[][] a) throws RemoteException;
     void getL32() throws RemoteException;
-    void getL40() throws RemoteException;
+    double[][] getL40() throws RemoteException;
     double[][] getL42() throws RemoteException;
 }
