@@ -93,7 +93,7 @@ public class Server implements Brain {
             System.out.println("Результат обрахунку:");
             MyJAMA.show(L40);
         }
-        return L40;
+        //return L40;
     }
 
     public double[][] getL42() {
