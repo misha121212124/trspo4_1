@@ -86,14 +86,14 @@ public class Server implements Brain {
         }
     }
 
-    public void getL40() {
+    public double[][] getL40() {
         System.out.println("Обрахунок L40");
         L40 =  MyJAMA.multiplication(L30, L30);
         if(showIntermediateResults) {
             System.out.println("Результат обрахунку:");
             MyJAMA.show(L40);
         }
-        //return L40;
+        return L40;
     }
 
     public double[][] getL42() {
